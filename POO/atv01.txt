@@ -1,25 +1,52 @@
 1. O que é programação orientada a objetos?
 
-A programação orientada a objetos é basicamente uma maneira de programar em que a gente organiza o código pensando em objetos, como se fossem coisas do mundo real. Cada objeto possui as suas características, que chamamos de atributos, e ações, que chamamos de métodos. O intuito é que eles vão se relacionando e interagindo pra formar o sistema completo.
+A programação orientada a objetos é basicamente uma maneira de programar em que 
+a gente organiza o código pensando em objetos, como se fossem coisas do mundo real.
+Cada objeto possui as suas características, que chamamos de atributos, e ações, 
+que chamamos de métodos. O intuito é que eles vão se relacionando e interagindo pra 
+formar o sistema completo.
 
 2. Quais as vantagens em usar POO em vez da programação estruturada?
 
-A principal diferença é que com POO o código fica bem mais organizado e dá pra manter com menos dificuldades. Você consegue reaproveitar partes dele em outros lugares do sistema (aí entra a herança), proteger dados importantes que não devem ser acessados diretamente (encapsulamento) e tudo fica mais próximo de como a gente pensa sobre o mundo real, já que tem mais abstração. Já na programação estruturada é mais como seguir uma receita de bolo passo a passo, o que funciona sim, mas quando o sistema começa a crescer se torna dificil de entender e realizar manutenções.
+A principal diferença é que com POO o código fica bem mais organizado e dá pra manter 
+com menos dificuldades. Você consegue reaproveitar partes dele em outros lugares do 
+sistema (aí entra a herança), proteger dados importantes que não devem ser acessados 
+diretamente (encapsulamento) e tudo fica mais próximo de como a gente pensa sobre o mundo 
+real, já que tem mais abstração. Já na programação estruturada é mais como seguir uma 
+receita de bolo passo a passo, o que funciona sim, mas quando o sistema começa a crescer 
+se torna dificil de entender e realizar manutenções.
 
 3. O que é um objeto na POO?
 
-Um objeto é tipo a concretização de uma ideia. Por exemplo, se a classe é a planta de uma casa, mostrando como tudo deve ser, o objeto é a casa de verdade já construída e pronta pra morar. Ele tem características/atributos (cor, tamanho, quantos cômodos) e consegue fazer coisas/métodos (abrir a porta, ligar a luz, fechar a janela). E cada objeto é único(tem instâncias), mesmo quando construído a partir da mesma planta. Duas casas podem ser iguais no projeto, mas uma pode ter a parede azul e a outra amarela.
+Um objeto é tipo a concretização de uma ideia. Por exemplo, se a classe é a planta de uma 
+casa, mostrando como tudo deve ser, o objeto é a casa de verdade já construída e pronta pra
+morar. Ele tem características/atributos (cor, tamanho, quantos cômodos) e consegue fazer 
+coisas/métodos (abrir a porta, ligar a luz, fechar a janela). E cada objeto é único(tem 
+instâncias), mesmo quando construído a partir da mesma planta. Duas casas podem ser iguais 
+no projeto, mas uma pode ter a parede azul e a outra amarela.
 
 4. Quais são os 4 pilares da POO?
 
 Abstração
-É o princípio que consiste em esconder a complexidade interna e expor apenas o que é necessário para a interação com o objeto. Em termos práticos, definimos uma interface clara (métodos públicos) que representa o comportamento essencial, enquanto os detalhes de implementação ficam encapsulados. Um exemplo clássico é o sistema de direção de um carro: o motorista interage apenas com a interface (volante, pedais, painel), sem precisar conhecer os mecanismos internos de combustão, injeção eletrônica ou transmissão. A complexidade existe, mas fica abstraída.
+É o princípio que consiste em esconder a complexidade interna e expor apenas o que é necessário 
+para a interação com o objeto. Em termos práticos, definimos uma interface clara (métodos públicos)
+que representa o comportamento essencial, enquanto os detalhes de implementação ficam encapsulados.
+Um exemplo clássico é o sistema de direção de um carro: o motorista interage apenas com a interface
+(volante, pedais, painel), sem precisar conhecer os mecanismos internos de combustão, injeção 
+eletrônica ou transmissão. A complexidade existe, mas fica abstraída.
 
 Encapsulamento
-É basicamente proteger os dados do objeto, permitindo que eles sejam acessados só através de regras as quais serão definidas. Na prática isso vai trazer mais segurança controlando as interações de métodos, classes e objetos com os dados.
+É basicamente proteger os dados do objeto, permitindo que eles sejam acessados só através de regras as
+quais serão definidas. Na prática isso vai trazer mais segurança controlando as interações de métodos,
+classes e objetos com os dados.
 
 Herança
-Acontece quando uma classe filha herda características de uma classe mãe. Por exemplo, a classe "Cachorro" herda da classe "Animal". Então o cachorro respira e se move porque isso vem do animal, mas ele também pode latir, que é algo específico dele.
+Acontece quando uma classe filha herda características de uma classe mãe. Por exemplo, a classe 
+"Cachorro" herda da classe "Animal". Então o cachorro respira e se move porque isso vem do animal, 
+mas ele também pode latir, que é algo específico dele.
 
 Polimorfismo
-É aquela parada de um mesmo método se comportar diferente em objetos diferentes. Por exemplo, se você tem um método chamado "seVestir()", ele vai funcionar pro Carlos (que prefere roupas mais sociais) e pra Eduarda (que adora roupas esportivas), cada um se vestindo da sua própria maneira. O mesmo método, comportamentos diferentes.
+É aquela parada de um mesmo método se comportar diferente em objetos diferentes. Por exemplo, 
+se você tem um método chamado "seVestir()", ele vai funcionar pro Carlos (que prefere roupas mais
+sociais) e pra Eduarda (que adora roupas esportivas), cada um se vestindo da sua própria maneira.
+O mesmo método, comportamentos diferentes.
