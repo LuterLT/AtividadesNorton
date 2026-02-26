@@ -51,6 +51,7 @@ printf(“Valor de p: %d.\n”, *p);}
 
 ```
 **RESPOSTA:** está escrito void main. Deveria ser int main com um return 0 ao fim do código.  Por fim, está escrito "p= x;" contudo isso está incorreto pois o endereço apontado pelo ponteiro se tornaria 100 e não o endereço de x, o correto seria "p = &x;"
+
 b-)
 ```
 void troca (int *i, int *j) {  
@@ -60,6 +61,7 @@ int *temp;
 *j = *temp;}
 ```
 **RESPOSTA:**  o erro está no fato do ponteiro não ter sido alocado e portanto aponta para um lugar aleatório o que pode gerar diversas complicações. Nessa situação poderia ter sido utilizado uma variável normal, o que é bem mais fácil, ou vc pode usar o malloc no temp.
+
 c)  
 ```
 char *a, *b;  
@@ -71,6 +73,7 @@ else
 printf (“%s vem depois de %s no dicionário”, a, b);
 ```
 **RESPOSTA:**  o correto seria `char *a = "abacate", b*= "uva";  if( strcmp(a,b)>0){...}else if(strcmp(a,b)<0){...}`. Vale ressaltar quem nessa resposta também deveria importar a biblioteca string.h .
+
 ==**5- Escreva uma função chamada troca que troca os valores dos**  
 parâmetros recebidos. Sua assinatura deve ser:`void troca(float a, float *b);`==
 **RESPOSTA:**
