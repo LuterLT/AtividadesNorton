@@ -23,6 +23,7 @@ int main()
 ==**2-Teste e explique a diferença, caso exista, entre**==  
 a-) `p++; (*p)++; *(++p);`
 	**RESPOSTA:** O p++ incrementa 1 ao valor da variável e se for um ponteiro vai para o próximo elemento. O (*p)++ incrementa 1 no valor do ponteiro. O *(++p) vai para o proximo elemento e mostra o valor dele.
+	
 b) O que quer dizer `*(p+10)`?
 	**RESPOSTA:** Quer dizer que vamos acessar o valor de P 10 posições a frente, ou seja na posição 10 .
 
