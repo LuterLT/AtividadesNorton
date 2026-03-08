@@ -20,16 +20,21 @@ public class Paciente {
     public String getEmail() {
         return email;
     }
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmail(String email) throws Exception {
+
+        if(email == null || email.length()<6 || ! email.contains("@")){
+            throw new Exception("Email completo obrigatório!!");
+        }else{
+            this.email = email;    
+        }
     }
 
     public Paciente(){
         this.codigo=0;
-        this.nome="";
-        this.email="";
+        this.nome="indefinido";
+        this.email="indefinido@";
     }
-    public Paciente(int pCodigo, String pNome, String pEmail){
+    public Paciente(int pCodigo, String pNome, String pEmail) throws Exception{
         setCodigo(pCodigo);
         setEmail(pEmail);
         setNome(pNome);
