@@ -20,8 +20,12 @@ public class Agenda {
         return paciente;
     }
     //Setters
-    public void setData(String d){
-        this.data = d;
+    public void setData(String d) throws Exception{
+        if (d.matches(".*[a-zA-Z].*")){
+            throw new Exception("A data não deve conter letras!!!");
+        }else{
+            this.data = d;
+        }
     }
     public void setHora(String h){
         this.hora = h;
@@ -35,14 +39,14 @@ public class Agenda {
 
 
     //Constructors
-    public Agenda(String d, String h, String m, String p){
+    public Agenda(String d, String h, String m, String p) throws Exception{
         setData(d);
         setHora(h);
         setMedico(m);
         setPaciente(p);
     }
     public Agenda(){
-        this.data = "indefinido";
+        this.data = "0/0/0";
         this.hora = "indefinido";
         this.medico = "indefinido";
         this.paciente = "indefinido";

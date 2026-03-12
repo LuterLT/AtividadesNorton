@@ -19,22 +19,26 @@ public class Receita {
     public void setConsulta(String con){
         this.consulta = con;
     }
-    public void setData(String dat){
-        this.data = dat;
+    public void setData(String dat) throws Exception{
+        if(dat.matches(".*[a-zA-Z].*")){
+            throw new Exception("A data não pode conter letras");
+        }else{
+            this.data = dat;
+        }
     }
     public void setDescritivo(String des){
         this.descritivo = des;
     }
 
     //Constructors
-    public Receita(String con, String dat, String des){
+    public Receita(String con, String dat, String des) throws Exception{
         setConsulta(con);
         setData(dat);
         setDescritivo(des);
     }
     public Receita(){
         this.consulta = "indefinido";
-        this.data = "indefinido";
+        this.data = "0/0/0";
         this.descritivo = "indefinido";
     }
 

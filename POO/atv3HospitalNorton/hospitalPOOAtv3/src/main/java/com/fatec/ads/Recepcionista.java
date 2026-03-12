@@ -23,8 +23,12 @@ public class Recepcionista {
     public void setNome(String n){
         this.nome = n;
     }
-    public void setCpf(String c){
-        this.cpf = c;
+    public void setCpf(String c) throws Exception{
+        if(c.length()>14 || c.matches(".*[a-zA-Z].*")){
+            throw new Exception("O cpf deve conter apenas números e ter até 14 caracteres!");
+        }else{
+            this.cpf = c;
+        }
     }
     public void setTelefone(String t){
         this.telefone = t;
@@ -34,7 +38,7 @@ public class Recepcionista {
     }
 
     //Constructors
-    public Recepcionista(String n, String c, String t, String s){
+    public Recepcionista(String n, String c, String t, String s) throws Exception{
         setNome(n);
         setCpf(c);
         setTelefone(t);
@@ -42,7 +46,7 @@ public class Recepcionista {
     }
     public Recepcionista(){
         this.nome = "indefinido";
-        this.cpf = "indefinido";
+        this.cpf = "000.000.000-00";
         this.telefone = "indefinido";
         this.senha = "indefinido";
     }

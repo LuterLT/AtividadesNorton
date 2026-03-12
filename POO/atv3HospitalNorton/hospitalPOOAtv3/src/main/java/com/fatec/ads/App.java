@@ -17,6 +17,7 @@ public class App
             System.out.println("Ocorreu um erro: " + e.getMessage());
         }
 
+        try{
         var receita1 = new Receita();
         receita1.mostrar();
         var recepcionista1 = new Recepcionista();
@@ -29,5 +30,15 @@ public class App
         agenda1.mostrar();
         var consulta1 = new Consulta();
         consulta1.mostrar();
+        }
+        catch(Exception e){
+            System.out.println("Ocorreu um erro: " + e.getMessage());
+        }
+        
+        
+        
+        
+        
+        
     }
 }

@@ -30,8 +30,12 @@ public class Medico {
     public void setCrm(String c){
         this.nome = c;
     }
-    public void setTelefone(String t){
-        this.nome = t;
+    public void setTelefone(String t) throws Exception{
+        if(t.length()>20 || t.matches(".*[a-zA-Z].*")){
+            throw new Exception("O telefone deve conter até 20 caracteres e não ter letras");
+        }else{
+            this.nome = t;
+        }
     }
     public void setEspecialidade(String e){
         this.nome = e;
@@ -42,7 +46,7 @@ public class Medico {
     
 
     //Constructors
-    public Medico(String n, String c, String t, String e, String s){
+    public Medico(String n, String c, String t, String e, String s) throws Exception{
         setNome(n);
         setCrm(c);
         setTelefone(t);
@@ -52,7 +56,7 @@ public class Medico {
     public Medico(){
         this.nome = "indefinido";
         this.crm = "indefinido";
-        this.telefone = "indefinido";
+        this.telefone = "(00)0000-00000";
         this.especialidade = "indefinido";
         this.senha = "indefinido";
     }

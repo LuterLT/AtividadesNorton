@@ -23,13 +23,17 @@ public class Exame {
     public void setData(String dat){
         this.consulta = dat;
     }
-    public void setDescritivo(String des){
-        this.consulta = des;
+    public void setDescritivo(String des) throws Exception{
+        if(des.length() > 400){
+            throw new Exception("O descritivo deve conter no máximo 400 caracteres!");
+        }else{
+            this.consulta = des;
+        }
     } 
 
 
     //Constructors
-    public Exame(String con, String dat, String des){
+    public Exame(String con, String dat, String des) throws Exception{
         setConsulta(con);
         setData(dat);
         setDescritivo(des);

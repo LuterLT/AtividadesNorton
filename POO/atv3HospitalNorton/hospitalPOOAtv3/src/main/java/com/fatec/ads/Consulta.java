@@ -40,8 +40,12 @@ public class Consulta {
     public void setHistorico(String his){
         this.historico = his;
     }
-    public void setMedico(Medico med){
-        this.medico = med;
+    public void setMedico(Medico med) throws Exception{
+        if (med == null){
+            throw new Exception("O campo médico não pode estar vazio!");
+        }else{
+            this.medico = med;
+        }
     }
     public void setPaciente(Paciente pac){
         this.paciente = pac;
@@ -49,7 +53,7 @@ public class Consulta {
 
 
     //Constructors
-    public Consulta(String hor, String dat, String mot, String hist, Medico med, Paciente pac){
+    public Consulta(String hor, String dat, String mot, String hist, Medico med, Paciente pac) throws Exception{
         setHora(hor);
         setData(dat);
         setMotivo(mot);
