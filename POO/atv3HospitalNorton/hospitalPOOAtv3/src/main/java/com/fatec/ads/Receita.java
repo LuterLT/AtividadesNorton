@@ -1,12 +1,12 @@
 package com.fatec.ads;
 
 public class Receita {
-    private String consulta;
+    private Consulta consulta;
     private String data;
     private String descritivo;
 
     //Getters
-    public String getConsulta(){
+    public Consulta getConsulta(){
         return consulta;
     }
     public String getData(){
@@ -16,7 +16,7 @@ public class Receita {
         return descritivo;
     }
     //Setters
-    public void setConsulta(String con){
+    public void setConsulta(Consulta con){
         this.consulta = con;
     }
     public void setData(String dat) throws Exception{
@@ -31,13 +31,13 @@ public class Receita {
     }
 
     //Constructors
-    public Receita(String con, String dat, String des) throws Exception{
+    public Receita(Consulta con, String dat, String des) throws Exception{
         setConsulta(con);
         setData(dat);
         setDescritivo(des);
     }
     public Receita(){
-        this.consulta = "indefinido";
+        this.consulta = null;
         this.data = "0/0/0";
         this.descritivo = "indefinido";
     }

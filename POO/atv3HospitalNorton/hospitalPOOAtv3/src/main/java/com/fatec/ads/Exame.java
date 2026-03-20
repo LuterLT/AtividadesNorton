@@ -1,13 +1,13 @@
 package com.fatec.ads;
 
 public class Exame {
-    private String consulta;
+    private Consulta consulta;
     private String data;
     private String descritivo;
 
 
-    //Getters
-    public String getConsulta(){
+    //Getters---------------------------------------------------------------------------
+    public Consulta getConsulta(){
         return consulta;
     }
     public String getData(){
@@ -16,30 +16,30 @@ public class Exame {
     public String geDescritivo(){
         return descritivo;
     } 
-    //Setters
-    public void setConsulta(String con){
+    //Setters-----------------------------------------------------------------------------
+    public void setConsulta(Consulta con){
         this.consulta = con;
     }
     public void setData(String dat){
-        this.consulta = dat;
+        this.data = dat;
     }
     public void setDescritivo(String des) throws Exception{
         if(des.length() > 400){
             throw new Exception("O descritivo deve conter no máximo 400 caracteres!");
         }else{
-            this.consulta = des;
+            this.descritivo = des;
         }
     } 
 
 
-    //Constructors
-    public Exame(String con, String dat, String des) throws Exception{
+    //Constructors---------------------------------------------------------------------------
+    public Exame(Consulta con, String dat, String des) throws Exception{
         setConsulta(con);
         setData(dat);
         setDescritivo(des);
     }
     public Exame(){
-        this.consulta = "indefinido";
+        this.consulta = null;
         this.data = "indefinido";
         this.descritivo = "indefinido";
     }

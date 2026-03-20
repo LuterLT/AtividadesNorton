@@ -61,7 +61,11 @@ public class Medico {
         this.senha = "indefinido";
     }
 
-    public void acessar(){
+    public void acessarConsulta(Consulta consulta){
+        consulta.mostrar();
+    }
+    public void acessarExame(Exame exame){
+        exame.mostrar();
     }
     public void mostrar(){
         System.out.println("------MEDICO------");

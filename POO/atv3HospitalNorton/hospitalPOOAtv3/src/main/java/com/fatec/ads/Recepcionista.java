@@ -52,7 +52,12 @@ public class Recepcionista {
     }
 
 
-    public void acessar(){}
+    public void acessarPaciente(Paciente paciente){
+        paciente.mostrar();
+    }
+    public void acessarConsulta(Consulta consulta){
+        consulta.mostrar();
+    }
     public void mostrar(){
         System.out.println("------RECEPCIONISTA------");
         System.out.println("Nome: " + getNome());

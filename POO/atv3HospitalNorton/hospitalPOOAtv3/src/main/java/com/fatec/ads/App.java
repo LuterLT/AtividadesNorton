@@ -12,12 +12,7 @@ public class App
         
         var p2 = new Paciente(x++, "maria souza","maria@norton.net.br");
         p2.mostrar();
-        }
-        catch(Exception e){
-            System.out.println("Ocorreu um erro: " + e.getMessage());
-        }
-
-        try{
+        
         var receita1 = new Receita();
         receita1.mostrar();
         var recepcionista1 = new Recepcionista();
@@ -30,12 +25,15 @@ public class App
         agenda1.mostrar();
         var consulta1 = new Consulta();
         consulta1.mostrar();
+
+        recepcionista1.acessarPaciente(p1);
+        recepcionista1.acessarConsulta(consulta1);
         }
         catch(Exception e){
             System.out.println("Ocorreu um erro: " + e.getMessage());
         }
         
-        
+    
         
         
         

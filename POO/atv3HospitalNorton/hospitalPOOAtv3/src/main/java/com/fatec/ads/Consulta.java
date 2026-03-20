@@ -7,8 +7,8 @@ public class Consulta {
     private Paciente paciente;
     private String motivo;
     private String historico;
-
-    //Getters
+    
+    //Getters---------------------------------------------------------------------------
     public String getHora(){
         return hora;
     }
@@ -27,7 +27,7 @@ public class Consulta {
     public Paciente getPaciente(){
         return paciente;
     }
-    //Setters
+    //Setters----------------------------------------------------------------------------
     public void setHora(String hor){
         this.hora = hor;
     }
@@ -52,7 +52,7 @@ public class Consulta {
     }
 
 
-    //Constructors
+    //Constructors-------------------------------------------------------------------------
     public Consulta(String hor, String dat, String mot, String hist, Medico med, Paciente pac) throws Exception{
         setHora(hor);
         setData(dat);
