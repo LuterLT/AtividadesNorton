@@ -5,7 +5,6 @@ public class Agenda {
     private String hora;
     private Medico medico;
     private Paciente paciente;
-    private Consulta consulta;
 
     // Getters------------------------------------------------------------------------
     public String getData() {
@@ -19,9 +18,6 @@ public class Agenda {
     }
     public Paciente getPaciente() {
         return paciente;
-    }
-    public Consulta getConsulta() {
-        return consulta;
     }
 
     // Setters--------------------------------------------------------------------------
@@ -41,17 +37,13 @@ public class Agenda {
     public void setPaciente(Paciente p) {
         this.paciente = p;
     }
-    public void setConsulta(Consulta consulta) {
-        this.consulta = consulta;
-    }
 
     // Constructors----------------------------------------------------------------------
-    public Agenda(String d, String h, Medico m, Paciente p, Consulta c) throws Exception {
+    public Agenda(String d, String h, Medico m, Paciente p) throws Exception {
         setData(d);
         setHora(h);
         setMedico(m);
         setPaciente(p);
-        setConsulta(c);
     }
 
     public Agenda() {
@@ -59,7 +51,6 @@ public class Agenda {
         this.hora = "indefinido";
         this.medico = null;
         this.paciente = null;
-        this.consulta = null;
     }
 
     public void consultar() {
@@ -70,8 +61,7 @@ public class Agenda {
         System.out.println("Data: " + getData());
         System.out.println("Hora: " + getHora());
         System.out.println("Medico: " + getMedico());
-        System.out.println("Paciente: " + getPaciente());
-        System.out.println("Consulta: " + getConsulta() + "\n");
+        System.out.println("Paciente: " + getPaciente() + "\n");
     }
 
 }

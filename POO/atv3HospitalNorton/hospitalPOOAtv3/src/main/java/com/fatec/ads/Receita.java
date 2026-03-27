@@ -1,45 +1,26 @@
 package com.fatec.ads;
 
-public class Receita {
+public class Receita extends Procedimento {
     private Consulta consulta;
-    private String data;
-    private String descritivo;
 
     //Getters
     public Consulta getConsulta(){
         return consulta;
     }
-    public String getData(){
-        return data;
-    }
-    public String getDescritivo(){
-        return descritivo;
-    }
+    
     //Setters
     public void setConsulta(Consulta con){
         this.consulta = con;
     }
-    public void setData(String dat) throws Exception{
-        if(dat.matches(".*[a-zA-Z].*")){
-            throw new Exception("A data não pode conter letras");
-        }else{
-            this.data = dat;
-        }
-    }
-    public void setDescritivo(String des){
-        this.descritivo = des;
-    }
 
     //Constructors
     public Receita(Consulta con, String dat, String des) throws Exception{
+        super(dat, des);
         setConsulta(con);
-        setData(dat);
-        setDescritivo(des);
     }
     public Receita(){
+        super("0/0/0", "indefinido");
         this.consulta = null;
-        this.data = "0/0/0";
-        this.descritivo = "indefinido";
     }
 
 
@@ -49,8 +30,8 @@ public class Receita {
     public void mostrar(){
         System.out.println("------RECEITA-------");
         System.out.println("Consulta: " + getConsulta());
-        System.out.println("Data: " + getData());
-        System.out.println("Descritivo: " + getDescritivo() + "\n");
+        System.out.println("Data: " + this.data);
+        System.out.println("Descritivo: " + this.descritivo + "\n");
     }
 
 }

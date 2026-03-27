@@ -1,5 +1,6 @@
 package com.fatec.ads;
-
+//Medica efetiva consulta e solicita exames
+//Recepcionista marca consulta
 public class App 
 {
     public static void main( String[] args )
@@ -26,8 +27,6 @@ public class App
         var consulta1 = new Consulta();
         consulta1.mostrar();
 
-        recepcionista1.acessarPaciente(p1);
-        recepcionista1.acessarConsulta(consulta1);
         }
         catch(Exception e){
             System.out.println("Ocorreu um erro: " + e.getMessage());

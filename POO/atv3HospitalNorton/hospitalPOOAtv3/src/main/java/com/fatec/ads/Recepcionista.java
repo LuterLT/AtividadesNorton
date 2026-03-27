@@ -1,28 +1,14 @@
 package com.fatec.ads;
 
-public class Recepcionista {
-    private String nome;
+public class Recepcionista extends Funcionario {
     private String cpf;
-    private String telefone;
-    private String senha;
 
     //Getters
-    public String getNome(){
-        return nome;
-    }
     public String getCpf(){
         return cpf;
     }
-    public String getTelefone(){
-        return telefone;
-    }
-    public String getSenha(){
-        return senha;
-    }
+    
     //Setters
-    public void setNome(String n){
-        this.nome = n;
-    }
     public void setCpf(String c) throws Exception{
         if(c.length()>14 || c.matches(".*[a-zA-Z].*")){
             throw new Exception("O cpf deve conter apenas números e ter até 14 caracteres!");
@@ -30,39 +16,31 @@ public class Recepcionista {
             this.cpf = c;
         }
     }
-    public void setTelefone(String t){
-        this.telefone = t;
-    }
-    public void setSenha(String s){
-        this.senha = s;
-    }
 
     //Constructors
     public Recepcionista(String n, String c, String t, String s) throws Exception{
-        setNome(n);
+        super(n, t, s);
         setCpf(c);
-        setTelefone(t);
-        setSenha(s);
     }
     public Recepcionista(){
-        this.nome = "indefinido";
+        super("indefinido", "indefinido", "indefinido");
         this.cpf = "000.000.000-00";
-        this.telefone = "indefinido";
-        this.senha = "indefinido";
     }
 
-
-    public void acessarPaciente(Paciente paciente){
-        paciente.mostrar();
+    public Agenda marcarAgenda() throws Exception{
+        var p1 = new Paciente(1, "jose da silva", "jose@norton.net.br");
+        var m1 = new Medico("Maria Antonieta", "128371833", "1241-1241", "Geratria", "senha");
+        var a1 = new Agenda("12/12/12", "10:20", m1, p1);
+        return a1;
     }
-    public void acessarConsulta(Consulta consulta){
-        consulta.mostrar();
+    public void acessar(){
+
     }
     public void mostrar(){
         System.out.println("------RECEPCIONISTA------");
-        System.out.println("Nome: " + getNome());
+        System.out.println("Nome: " + this.nome);
         System.out.println("Cpf: " + getCpf());
-        System.out.println("Telefone: " + getTelefone());
-        System.out.println("Senha: " + getSenha() + "\n");
+        System.out.println("Telefone: " + this.telefone);
+        System.out.println("Senha: " + this.senha + "\n");
     }
 }
