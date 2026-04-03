@@ -1,6 +1,6 @@
 package com.fatec.ads;
 
-public class Procedimento {
+public abstract class Procedimento {
     public String data;
     public String descritivo;
 

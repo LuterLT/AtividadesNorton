@@ -26,11 +26,17 @@ public class Exame extends Procedimento {
     }
 
 
-    public void solicitar(){}
-    public void consultar(){}
+    public void solicitar(){
+        System.out.println("Exame solicitado para o paciente " + (consulta != null && consulta.getPaciente() != null ? consulta.getPaciente().getNome() : "indefinido") + " em " + this.data + ".");
+    }
+    @Override
+    public void consultar(){
+        System.out.println("Consultando exame de " + this.data + " para " + (consulta != null && consulta.getPaciente() != null ? consulta.getPaciente().getNome() : "indefinido") + ".");
+        mostrar();
+    }
     public void mostrar(){
         System.out.println("------EXAME------");
-        System.out.println("Consulta: " + getConsulta());
+        System.out.println("Paciente: " + (consulta != null && consulta.getPaciente() != null ? consulta.getPaciente().getNome() : "indefinido"));
         System.out.println("Data: " + this.data);
         System.out.println("Descritivo: " + this.descritivo + "\n");
     }

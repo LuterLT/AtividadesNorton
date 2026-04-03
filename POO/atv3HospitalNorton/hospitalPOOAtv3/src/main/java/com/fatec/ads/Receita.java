@@ -25,11 +25,17 @@ public class Receita extends Procedimento {
 
 
 
-    public void preescrever(){};
-    public void consultar(){};
+    public void preescrever(){
+        System.out.println("Receita prescrita para o paciente " + (consulta != null && consulta.getPaciente() != null ? consulta.getPaciente().getNome() : "indefinido") + " na data " + this.data + ".");
+    };
+    @Override
+    public void consultar(){
+        System.out.println("Consultando receita de " + this.data + " para " + (consulta != null && consulta.getPaciente() != null ? consulta.getPaciente().getNome() : "indefinido") + ".");
+        mostrar();
+    };
     public void mostrar(){
         System.out.println("------RECEITA-------");
-        System.out.println("Consulta: " + getConsulta());
+        System.out.println("Paciente: " + (consulta != null && consulta.getPaciente() != null ? consulta.getPaciente().getNome() : "indefinido"));
         System.out.println("Data: " + this.data);
         System.out.println("Descritivo: " + this.descritivo + "\n");
     }

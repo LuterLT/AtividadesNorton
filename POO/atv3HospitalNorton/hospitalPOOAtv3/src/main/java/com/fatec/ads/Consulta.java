@@ -45,18 +45,35 @@ public class Consulta extends Agenda {
     }
 
 
-    public void marcar(){};
-    public void cancelar(){};
-    public void consultar(){};
-    public void realizar(){};
-    public void atualizar(){};
+    public void marcar(){
+        System.out.println("Consulta marcada para " + getData() + " às " + getHora() + " com o médico " + (getMedico() != null ? getMedico().getNome() : "indefinido") + ".");
+    };
+    public void cancelar(){
+        System.out.println("Consulta cancelada para " + getData() + " às " + getHora() + ".");
+    };
+    @Override
+    public void consultar(){
+        System.out.println("Consulta em " + getData() + " às " + getHora() + " para o paciente " + (getPaciente() != null ? getPaciente().getNome() : "indefinido") + ".");
+        mostrar();
+        System.out.println("Exames solicitados: " + getExames().size());
+        System.out.println("Receitas prescritas: " + getReceitas().size() + "\n");
+    };
+    public void realizar(){
+        System.out.println("Consulta realizada pelo médico " + (getMedico() != null ? getMedico().getNome() : "indefinido") + " para o paciente " + (getPaciente() != null ? getPaciente().getNome() : "indefinido") + ".");
+    };
+    public void atualizar(){
+        System.out.println("Consulta atualizada: " + getData() + " às " + getHora() + ".");
+    };
+    @Override
     public void mostrar(){
         System.out.println("------CONSULTA------");
         System.out.println("Hora: " + getHora());
         System.out.println("Data: " + getData());
         System.out.println("Motivo: " + getMotivo());
         System.out.println("Historico: " + getHistorico());
-        System.out.println("Medico: " + getMedico());
-        System.out.println("Paciente: " + getPaciente() + "\n");
+        System.out.println("Medico: " + (getMedico() != null ? getMedico().getNome() : "indefinido"));
+        System.out.println("Paciente: " + (getPaciente() != null ? getPaciente().getNome() : "indefinido"));
+        System.out.println("Exames: " + getExames().size());
+        System.out.println("Receitas: " + getReceitas().size() + "\n");
     }
 }

@@ -1,6 +1,6 @@
 package com.fatec.ads;
 
-public class Funcionario {
+public abstract class Funcionario {
     public String nome;
     public String telefone;
     public String senha;
@@ -16,6 +16,10 @@ public class Funcionario {
         this.nome = "indefinido";
         this.telefone = "indefinido";
         this.senha = "indefinido";
+    }
+
+    public String getNome() {
+        return nome;
     }
 
     // Métodos

@@ -34,19 +34,20 @@ public class Medico extends Funcionario {
     }
 
     public void realizarConsulta(Agenda agenda) throws Exception{
-        var c1 = new Consulta();
-        c1.setMedico(agenda.getMedico());
-        c1.setPaciente(agenda.getPaciente());
-        c1.setData(agenda.getData());
-        c1.setHora(agenda.getHora());
-        c1.setMotivo("Dor Abdominal");
-        c1.setHistorico("apresenta dores na região do estomago");
-        var e1 = new Exame(c1, "01/04/2021", "Exame de Sangue");
+        var c1 = new Consulta(agenda.getHora(), agenda.getData(), "Dor abdominal", "Paciente apresenta dores na região do estômago", agenda.getMedico(), agenda.getPaciente());
+        var e1 = new Exame(c1, "01/04/2026", "Exame de sangue completo");
         c1.getExames().add(e1);
-        c1.getReceitas().add(new Receita(c1, "01/04/2026", "Buscopan"));
+        var r1 = new Receita(c1, "01/04/2026", "Buscopan 10mg, 2 vezes ao dia");
+        c1.getReceitas().add(r1);
+        System.out.println("Médico " + this.nome + " realizou consulta com " + agenda.getPaciente().getNome() + " em " + agenda.getData() + " às " + agenda.getHora() + ".");
+        c1.realizar();
+        e1.solicitar();
+        r1.preescrever();
+        c1.consultar();
     }
+    @Override
     public void acessar(){
-
+        System.out.println("Médico " + this.nome + " está acessando o prontuário médico.");
     }
     public void mostrar(){
         System.out.println("------MEDICO------");

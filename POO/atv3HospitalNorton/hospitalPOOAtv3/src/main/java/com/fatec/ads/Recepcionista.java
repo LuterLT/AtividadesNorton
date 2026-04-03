@@ -28,13 +28,15 @@ public class Recepcionista extends Funcionario {
     }
 
     public Agenda marcarAgenda() throws Exception{
-        var p1 = new Paciente(1, "jose da silva", "jose@norton.net.br");
-        var m1 = new Medico("Maria Antonieta", "128371833", "1241-1241", "Geratria", "senha");
+        var p1 = new Paciente(1, "Jose da Silva", "jose@norton.net.br");
+        var m1 = new Medico("Maria Antonieta", "128371833", "1241-1241", "Geriatria", "senha");
         var a1 = new Agenda("12/12/12", "10:20", m1, p1);
+        System.out.println("Recepcionista " + this.nome + " marcou agenda para " + p1.getNome() + " com " + m1.getNome() + " em " + a1.getData() + " às " + a1.getHora() + ".");
         return a1;
     }
+    @Override
     public void acessar(){
-
+        System.out.println("Recepcionista " + this.nome + " está acessando o sistema.");
     }
     public void mostrar(){
         System.out.println("------RECEPCIONISTA------");
